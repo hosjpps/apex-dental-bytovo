@@ -21,7 +21,7 @@ export const services: Service[] = [
       'Костная пластика',
       'Синус-лифтинг',
     ],
-    href: '/uslugi#implantatsiya',
+    href: '/uslugi/implantatsiya/',
     highlight: true,
   },
   {
@@ -36,7 +36,7 @@ export const services: Service[] = [
       'Элайнеры (капы)',
       'Ретейнеры',
     ],
-    href: '/uslugi#ortodontiya',
+    href: '/uslugi/ortodontiya/',
   },
   {
     id: 'terapiya',
@@ -50,7 +50,7 @@ export const services: Service[] = [
       'Профессиональная чистка',
       'Лечение каналов',
     ],
-    href: '/uslugi#terapiya',
+    href: '/uslugi/terapiya/',
   },
   {
     id: 'hirurgiya',
@@ -64,7 +64,7 @@ export const services: Service[] = [
       'Кистэктомия',
       'Посттравматическая помощь',
     ],
-    href: '/uslugi#hirurgiya',
+    href: '/uslugi/hirurgiya/',
   },
   {
     id: 'ortopediya',
@@ -78,7 +78,7 @@ export const services: Service[] = [
       'Протезы на имплантах',
       'Вкладки и накладки',
     ],
-    href: '/uslugi#ortopediya',
+    href: '/uslugi/ortopediya/',
   },
   {
     id: 'detskaya',
@@ -92,6 +92,6 @@ export const services: Service[] = [
       'Ортодонтические пластины',
       'Профессиональная гигиена детям',
     ],
-    href: '/uslugi#detskaya',
+    href: '/uslugi/detskaya/',
   },
 ];

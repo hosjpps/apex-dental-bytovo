@@ -18,6 +18,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       changeFrequency: "monthly",
     },
+    ...[
+      "implantatsiya",
+      "ortodontiya",
+      "terapiya",
+      "ortopediya",
+      "hirurgiya",
+      "detskaya",
+    ].map((slug) => ({
+      url: `${BASE}/uslugi/${slug}/`,
+      lastModified: new Date(),
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+    })),
     {
       url: `${BASE}/politika-konfidencialnosti/`,
       priority: 0.1,
