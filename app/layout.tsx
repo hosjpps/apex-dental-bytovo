@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
+import CookieBanner from "@/components/layout/CookieBanner";
+import { Toaster } from "@/components/ui/sonner";
 
 const fraunces = Fraunces({
   subsets: ["latin", "latin-ext"],
@@ -16,9 +21,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Стоматология АПЕКС | Южное Бутово, Москва",
+  title: {
+    default: "Стоматология АПЕКС | Южное Бутово, Москва",
+    template: "%s | АПЕКС",
+  },
   description:
     "Семейная стоматологическая клиника в Южном Бутово. Имплантация, брекеты, лечение кариеса. Рейтинг 5.0 на Я.Картах. Запись: +7 (495) 157-27-70.",
+  metadataBase: new URL("https://apex-dental.vercel.app"),
 };
 
 export default function RootLayout({
@@ -38,9 +47,14 @@ export default function RootLayout({
         >
           Перейти к содержимому
         </a>
+        <Navbar />
         <main id="main-content" className="flex-1">
           {children}
         </main>
+        <Footer />
+        <MobileStickyCTA />
+        <CookieBanner />
+        <Toaster />
       </body>
     </html>
   );
