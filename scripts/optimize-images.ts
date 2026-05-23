@@ -29,11 +29,7 @@ async function processImage(inputPath: string) {
   const outDir = path.join(OUTPUT_DIR, dir);
   await fs.mkdir(outDir, { recursive: true });
 
-  const meta = await sharp(inputPath).metadata();
-  const origWidth = meta.width ?? 0;
-
   for (const w of WIDTHS) {
-    if (origWidth && w > origWidth * 1.5) continue;
     const resized = sharp(inputPath).resize(w, undefined, {
       withoutEnlargement: true,
     });
