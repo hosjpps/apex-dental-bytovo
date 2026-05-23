@@ -44,8 +44,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Optimized images (regenerated at build via pnpm optimize:images)
-public/images/clinic/
-public/images/doctors/
+# Optimized images: committed for Vercel reliability. Regenerate locally via `pnpm optimize:images` when raw images change.
 test-results/
 /playwright-report/
