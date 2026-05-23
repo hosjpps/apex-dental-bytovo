@@ -19,8 +19,8 @@ export default function Hero() {
           {/* Photo — first on mobile, right on desktop */}
           <div className="order-first lg:order-last lg:col-span-6">
             <ClinicImage
-              src="/images/clinic/clinic-01.jpg"
-              alt="Интерьер клиники АПЕКС — стерильный современный кабинет в Южном Бутово"
+              src="/images/clinic/clinic-19.jpg"
+              alt="Кабинет стоматологии АПЕКС с современным креслом и оборудованием"
               priority
               sizes="(max-width: 1023px) 100vw, 46vw"
               className="w-full aspect-[4/5] object-cover rounded-[16px] ring-4 ring-accent-soft/40"
