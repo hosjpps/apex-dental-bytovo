@@ -1,13 +1,27 @@
-export default function Home() {
+import Hero from '@/components/sections/Hero';
+import TrustStrip from '@/components/sections/TrustStrip';
+import Services from '@/components/sections/Services';
+import Doctors from '@/components/sections/Doctors';
+import Guarantees from '@/components/sections/Guarantees';
+import Prices from '@/components/sections/Prices';
+import Gallery from '@/components/sections/Gallery';
+import Reviews from '@/components/sections/Reviews';
+import FAQ from '@/components/sections/FAQ';
+import Contact from '@/components/sections/Contact';
+
+export default function HomePage() {
   return (
-    <div className="p-12 max-w-4xl mx-auto">
-      <p className="text-sm uppercase tracking-widest text-accent mb-3">
-        Стоматология · Южное Бутово
-      </p>
-      <h1 className="text-5xl text-primary mb-4">АПЕКС</h1>
-      <p className="text-text-muted">
-        Главная страница в разработке. Подключаются секции из плана.
-      </p>
-    </div>
+    <>
+      <Hero />
+      <TrustStrip />
+      <Services />
+      <Doctors />
+      <Guarantees />
+      <Prices />
+      <Gallery />
+      <Reviews />
+      <FAQ />
+      <Contact />
+    </>
   );
 }
