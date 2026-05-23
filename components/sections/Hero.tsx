@@ -1,9 +1,9 @@
 'use client';
 
 import { Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { ClinicImage } from '@/components/ClinicImage';
 import { clinic } from '@/content/clinic';
+import BookingDialog from '@/components/forms/BookingDialog';
 
 export default function Hero() {
   const phone = clinic.phones[0];
@@ -63,14 +63,10 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
-              {/* TODO Task 38: replace onClick with BookingDialog trigger */}
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground"
-                onClick={() => console.log('TODO: open BookingDialog')}
-              >
-                Записаться онлайн
-              </Button>
+              <BookingDialog
+                triggerLabel="Записаться онлайн"
+                triggerClassName="h-9 gap-1.5 px-2.5 bg-primary text-primary-foreground"
+              />
               <a
                 href={`tel:${phone.value}`}
                 className="inline-flex items-center justify-center gap-2 px-6 h-11 border border-primary text-primary rounded-md text-base font-medium hover:bg-bg-soft transition-colors"

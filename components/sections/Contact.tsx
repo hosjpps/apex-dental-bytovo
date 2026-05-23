@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Train } from 'lucide-react';
 import { clinic } from '@/content/clinic';
+import BookingForm from '@/components/forms/BookingForm';
 
 export default function Contact() {
   return (
@@ -18,12 +19,9 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
-          {/* LEFT: booking form placeholder — Task 36 will replace this */}
-          {/* TODO(Task 36): replace with <BookingForm /> from @/components/forms/BookingForm */}
-          <div className="bg-bg-soft border border-border p-8 rounded-[16px] flex items-center justify-center min-h-[320px]">
-            <p className="text-text-muted text-sm text-center">
-              Здесь будет форма записи (Task 36)
-            </p>
+          {/* LEFT: booking form */}
+          <div className="bg-white border border-border p-8 rounded-[16px]">
+            <BookingForm />
           </div>
 
           {/* RIGHT: contacts + map */}

@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Menu, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
@@ -11,6 +10,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { clinic } from '@/content/clinic';
+import BookingDialog from '@/components/forms/BookingDialog';
 
 const NAV_LINKS = [
   { label: 'Услуги', href: '#services' },
@@ -99,10 +99,7 @@ export default function Navbar() {
             <Phone className="h-4 w-4" aria-hidden="true" />
             {phone.display}
           </a>
-          {/* TODO Task 38: replace onClick with BookingDialog trigger */}
-          <Button onClick={() => console.log('TODO: open BookingDialog')}>
-            Записаться
-          </Button>
+          <BookingDialog triggerLabel="Записаться" />
         </div>
 
         {/* Mobile burger */}
@@ -144,16 +141,10 @@ export default function Navbar() {
                 <Phone className="h-4 w-4" />
                 {phone.display}
               </a>
-              {/* TODO Task 38: replace onClick with BookingDialog trigger */}
-              <Button
-                className="w-full"
-                onClick={() => {
-                  setOpen(false);
-                  console.log('TODO: open BookingDialog');
-                }}
-              >
-                Записаться
-              </Button>
+              <BookingDialog
+                triggerLabel="Записаться"
+                triggerClassName="w-full"
+              />
             </div>
           </SheetContent>
         </Sheet>
