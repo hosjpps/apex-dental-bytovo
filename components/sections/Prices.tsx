@@ -62,7 +62,7 @@ export default function Prices() {
                 href="/uslugi/"
                 className="inline-flex items-center text-accent font-medium hover:text-primary transition-colors"
               >
-                Полный прайс-лист (160 услуг) →
+                Полный прайс-лист (154 услуги) →
               </a>
             </div>
           </div>

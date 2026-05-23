@@ -62,6 +62,9 @@ function parsePrice(raw: unknown): { price: number | null; unit?: string } {
     // "200 / зуб" → price + unit
     const slashUnit = raw.match(/^(\d+)\s*\/\s*(.+)$/);
     if (slashUnit) return { price: parseInt(slashUnit[1], 10), unit: `/ ${slashUnit[2].trim()}` };
+    // "18000-29000" → price range, take first number + unit
+    const rangeMatch = raw.match(/^(\d+)\s*[-–—]\s*(\d+)$/);
+    if (rangeMatch) return { price: parseInt(rangeMatch[1], 10), unit: `— ${parseInt(rangeMatch[2], 10).toLocaleString('ru-RU')} ₽` };
     // "от 10000" or plain number string
     const digits = raw.replace(/[^\d]/g, '');
     if (digits.length > 0) return { price: parseInt(digits, 10) };

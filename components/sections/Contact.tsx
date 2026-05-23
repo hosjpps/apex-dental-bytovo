@@ -81,8 +81,8 @@ export default function Contact() {
               </div>
             </address>
 
-            {/* Yandex Maps iframe */}
-            <div className="rounded-[12px] overflow-hidden border border-border">
+            {/* Yandex Maps iframe with fallback */}
+            <div className="rounded-[12px] overflow-hidden border border-border bg-bg-soft">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?text=Москва%20ул%20Изюмская%2039%20корп%201&z=16"
                 width="100%"
@@ -92,6 +92,17 @@ export default function Contact() {
                 style={{ border: 0, display: 'block' }}
                 aria-label="Карта с расположением клиники АПЕКС"
               />
+              <noscript>
+                <div className="p-8 text-center text-text-muted">
+                  <p className="mb-3">Карта не доступна без JavaScript.</p>
+                  <a
+                    href={`https://yandex.ru/maps/org/${clinic.social.yandexMapsId}`}
+                    className="text-accent underline"
+                  >
+                    Открыть карту на Я.Картах →
+                  </a>
+                </div>
+              </noscript>
             </div>
 
             <a
