@@ -28,12 +28,12 @@ export default function Doctors() {
               key={doc.id}
               className="bg-white rounded-[16px] overflow-hidden hover:shadow-[0_8px_32px_0_rgba(30,58,95,0.12)] transition-shadow"
             >
-              {errored[doc.id] ? (
+              {!doc.photo || errored[doc.id] ? (
                 <div
                   className="aspect-[3/4] bg-accent-soft flex items-center justify-center"
                   aria-hidden="true"
                 >
-                  <span className="text-3xl font-serif font-bold text-primary">
+                  <span className="text-5xl font-serif font-bold text-primary">
                     {doc.initials}
                   </span>
                 </div>
@@ -41,7 +41,7 @@ export default function Doctors() {
                 <img
                   src={doc.photo}
                   alt={`${doc.name}, ${doc.position}`}
-                  className="aspect-[3/4] w-full object-cover"
+                  className="aspect-[3/4] w-full object-cover bg-white"
                   loading="lazy"
                   onError={() => setErrored(prev => ({ ...prev, [doc.id]: true }))}
                 />

@@ -53,7 +53,7 @@ export const doctors: Doctor[] = [
     specialization: 'Хирургия, имплантология, ЧЛХ',
     education: 'МГМСУ + ЦНИИС и ЧЛХ',
     experience: '',
-    photo: '/images/doctors/andreychuk.jpg',
+    photo: '',
     initials: 'АС',
   },
   {
@@ -88,7 +88,7 @@ export const doctors: Doctor[] = [
     education: 'СГМУ',
     experience: '20+ лет',
     // Фото отсутствует в открытых источниках — запросить у клиники
-    photo: '/images/doctors/shitova.jpg',
+    photo: '',
     initials: 'ШТ',
   },
 ];
