@@ -463,7 +463,8 @@ export const priceCategories: PriceCategory[] = [
       {
         "id": "ort-09",
         "name": "Лечение съемными пластинками",
-        "price": 1800029000
+        "price": 18000,
+        "unit": "— 29 000 ₽"
       },
       {
         "id": "ort-10",
