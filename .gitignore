@@ -47,3 +47,5 @@ next-env.d.ts
 # Optimized images (regenerated at build via pnpm optimize:images)
 public/images/clinic/
 public/images/doctors/
+test-results/
+/playwright-report/
