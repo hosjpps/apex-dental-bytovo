@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 import CookieBanner from "@/components/layout/CookieBanner";
 import { Toaster } from "@/components/ui/sonner";
+import { JsonLd } from "@/components/JsonLd";
 
 const fraunces = Fraunces({
   subsets: ["latin", "latin-ext"],
@@ -28,6 +29,13 @@ export const metadata: Metadata = {
   description:
     "Семейная стоматологическая клиника в Южном Бутово. Имплантация, брекеты, лечение кариеса. Рейтинг 5.0 на Я.Картах. Запись: +7 (495) 157-27-70.",
   metadataBase: new URL("https://apex-dental.vercel.app"),
+  alternates: { canonical: "https://apex-dental.vercel.app/" },
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    siteName: "Стоматология АПЕКС",
+    url: "https://apex-dental.vercel.app/",
+  },
 };
 
 export default function RootLayout({
@@ -55,6 +63,7 @@ export default function RootLayout({
         <MobileStickyCTA />
         <CookieBanner />
         <Toaster />
+        <JsonLd />
       </body>
     </html>
   );
