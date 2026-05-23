@@ -11,7 +11,8 @@ import { ClinicImage } from '@/components/ClinicImage';
 
 // Use Yandex Maps photos (11-22): high-quality 1280x853/960x1280 shots.
 // Old-site photos (01-10) are low-res 480x640 (business cards, certificates) — skipped.
-const GALLERY_IMAGES = [11, 12, 13, 14, 15, 17, 18, 19, 20, 22, 25, 26].map((n) => ({
+// clinic-19 is used in Hero — exclude here to avoid duplicate.
+const GALLERY_IMAGES = [11, 12, 13, 14, 15, 17, 18, 20, 22, 25, 26, 27].map((n) => ({
   src: `/images/clinic/clinic-${String(n).padStart(2, '0')}.jpg`,
   alt: `Клиника АПЕКС — интерьер ${n}`,
 }));
